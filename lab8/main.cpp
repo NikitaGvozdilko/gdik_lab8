@@ -5,8 +5,6 @@ int main()
     Array obj;
     obj.fill();
     obj.show();
-
     cout << "\nEnd of program!!!!!!!";
-
     return 0;
 }
