@@ -1,4 +1,5 @@
 #include "array.h"
+int Array::iter=1;
 void Array::fill()
 {
     cout << "Enter 0 to complete entry!\n";
@@ -44,4 +45,32 @@ bool Array::srn(int ind, int N)
     }
     }
     return false;
+}
+
+void Array::socr(int N)
+{
+    short tch;
+    switch ( N )
+         {
+            case 1:
+    {
+               tch=1;
+               break;
+    }
+            case 2:
+    {
+               tch=2;
+               break;
+    }
+            default:
+               tch=3;
+         }
+    for(int i=0;i<size;i++)
+    {
+    str[i].erase(str[i].begin()+N, str[i].end());
+    for(int j=0;j<tch;j++)
+        str[i]+='.';
+    if(srn(i, N))
+        str[i]+='('+(iter++)+')';
+}
 }
