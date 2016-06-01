@@ -9,8 +9,6 @@ int main()
     cin>>N;
     obj.socr(N);
     obj.show();
-    if(obj.srn(0, 2))
-            cout<<"est takaya stroka";
     cout << "\nEnd of program!!!!!!!";
     return 0;
 }

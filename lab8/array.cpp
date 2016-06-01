@@ -71,6 +71,6 @@ void Array::socr(int N)
     for(int j=0;j<tch;j++)
         str[i]+='.';
     if(srn(i, N))
-        str[i]+='('+(iter++)+')';
+        str[i]+='('+to_string(iter++)+')';
 }
 }
