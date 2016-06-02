@@ -4,7 +4,7 @@ int main()
     cout << "Input the words!" << endl;
     Array obj;
     obj.fill();
-    cout<<"Kol-vo simvolov do skolki sokrashat\n";
+    cout<<"The number of how many characters to reduce\n";
     int N;
     cin>>N;
     obj.socr(N);

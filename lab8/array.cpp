@@ -1,4 +1,5 @@
 #include "array.h"
+//Розробленно Гвоздилко М.
 int Array::iter=1;
 void Array::fill()
 {
@@ -20,13 +21,12 @@ void Array::fill()
         str[i] = temp[i];
     delete [] temp;          //удаляем временный массив
 }
-
 void Array::show()
 {
     for(int i = 0; i < size; i++)
         cout << str[i] << endl;
 }
-
+//Розробленно Лимарєвим І.
 bool Array::srn(int ind, int N)
 {
     string s=str[ind];
@@ -46,31 +46,21 @@ bool Array::srn(int ind, int N)
     }
     return false;
 }
-
+//Розробленно разом
 void Array::socr(int N)
 {
-    short tch;
-    switch ( N )
-         {
-            case 1:
-    {
-               tch=1;
-               break;
-    }
-            case 2:
-    {
-               tch=2;
-               break;
-    }
-            default:
-               tch=3;
-         }
     for(int i=0;i<size;i++)
     {
+    short tch;
+    switch (str[i].size()-N)
+        { case 1:{ tch=1; break;}
+          case 2:{ tch=2; break;}
+          default: tch=3;
+        }
     str[i].erase(str[i].begin()+N, str[i].end());
     for(int j=0;j<tch;j++)
         str[i]+='.';
     if(srn(i, N))
         str[i]+='('+to_string(iter++)+')';
-}
+    }
 }
